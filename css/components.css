@@ -1,0 +1,15 @@
+.artifact-button {
+  border: 0;
+  background: var(--forest);
+  color: white;
+  padding: .9rem 1.15rem;
+  font-weight: 700;
+  box-shadow: 4px 4px 0 var(--forest-deep);
+}
+.artifact-button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.architecture-map.is-inspected article {
+  background: #fff0ca;
+}

@@ -1,0 +1,38 @@
+
+/* Build 6.0 final release polish */
+html:not(.app-ready) body {
+  opacity: 0;
+}
+html.app-ready body {
+  opacity: 1;
+  transition: opacity .22s ease;
+}
+.module-chip {
+  white-space: nowrap;
+}
+footer small {
+  opacity: .72;
+}
+@media print {
+  .game-masthead,
+  .masthead-tools,
+  .pov-silhouette,
+  .transition-layer,
+  .audio-assets,
+  .local-return,
+  footer {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  .artifact,
+  .journal-spread,
+  .ranger-report,
+  .open-source-artifact {
+    box-shadow: none !important;
+    border: 1px solid black !important;
+    background: white !important;
+  }
+}

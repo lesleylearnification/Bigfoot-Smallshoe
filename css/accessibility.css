@@ -1,0 +1,130 @@
+
+:root {
+  --touch-min: 44px;
+  --content-max: 1600px;
+}
+html {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  min-width: 320px;
+}
+button,
+a,
+input,
+select,
+textarea {
+  min-height: var(--touch-min);
+}
+button[disabled],
+[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: .62;
+}
+[hidden],
+.hidden {
+  display: none !important;
+}
+:focus-visible {
+  outline: 4px solid var(--focus);
+  outline-offset: 4px;
+}
+.skip-link {
+  z-index: 2000;
+}
+.live-region {
+  position: fixed;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.reading-surface {
+  max-width: 72ch;
+}
+body.high-contrast {
+  --map-paper: #fff7dd;
+  --map-paper-light: #fffdf6;
+  --old-pine: #173622;
+  --fern-shadow: #071b0e;
+  --autumn-rust: #7d2d12;
+  --ink-black: #100a06;
+  --focus: #005fcc;
+}
+body.large-text {
+  font-size: 118%;
+}
+body.large-text .chapter-label,
+body.large-text .eyebrow {
+  letter-spacing: .09em;
+}
+body.keyboard-user .cabin-object:focus-visible,
+body.keyboard-user .source-artifact:focus-visible,
+body.keyboard-user .map-location:focus-visible {
+  filter: brightness(1.08);
+  box-shadow: 0 0 0 6px rgba(11,123,167,.24), var(--shadow-object);
+}
+.accessibility-panel {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1200;
+  width: min(360px, calc(100vw - 2rem));
+  padding: 1rem;
+  background: var(--texture-paper-light) center/cover;
+  border: 4px solid #54371f;
+  box-shadow: var(--shadow-room);
+}
+.accessibility-panel h2 {
+  margin: .2rem 0 .8rem;
+  color: var(--fern-shadow);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+}
+.accessibility-grid {
+  display: grid;
+  gap: .65rem;
+}
+.accessibility-option {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .7rem;
+  background: rgba(233,210,161,.62);
+  border: 2px solid #67462c;
+}
+.accessibility-option input {
+  width: 22px;
+  height: 22px;
+  min-height: 22px;
+}
+.accessibility-close {
+  position: absolute;
+  right: .45rem;
+  top: .35rem;
+  min-width: 44px;
+  border: 0;
+  background: transparent;
+  font-size: 1.8rem;
+}
+.accessibility-summary {
+  margin-top: .8rem;
+  padding-top: .8rem;
+  border-top: 2px dashed rgba(86,58,34,.34);
+  font-size: .92rem;
+}
+@media (forced-colors: active) {
+  * {
+    forced-color-adjust: auto;
+  }
+  .artifact,
+  .brand-card,
+  .choice-card,
+  .reflection-card,
+  .source-artifact,
+  .memory-node {
+    border: 2px solid CanvasText;
+    box-shadow: none;
+  }
+}

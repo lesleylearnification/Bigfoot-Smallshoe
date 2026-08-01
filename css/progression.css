@@ -1,0 +1,188 @@
+
+.window-panel img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.legend-rank {
+  margin:.2rem 0 .65rem;
+  color:var(--lantern-gold);
+  font-family:var(--font-display);
+  text-transform:uppercase;
+}
+.constellation-screen {
+  background:
+    linear-gradient(rgba(12,20,15,.32),rgba(10,16,12,.58)),
+    url("../assets/illustrations/environments/cabin-room-build6.jpg") center/cover;
+}
+.constellation-board {
+  width:min(1240px,100%);
+  margin:auto;
+  padding:2rem;
+  background:
+    linear-gradient(rgba(28,46,33,.08),rgba(28,46,33,.16)),
+    var(--texture-cork) center/cover;
+  border:12px solid #5a3921;
+}
+.constellation-board header {
+  max-width:850px;
+  padding:1rem;
+  background:var(--texture-paper-light) center/cover;
+  border-left:9px solid var(--old-pine);
+  box-shadow:var(--shadow-paper);
+}
+.constellation-board h1,
+.ending-book h1 {
+  margin:.2rem 0 .6rem;
+  color:var(--fern-shadow);
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  font-size:clamp(2.4rem,5vw,5.3rem);
+  line-height:.92;
+}
+.forest-memory-layout {
+  display:grid;
+  grid-template-columns:1.45fr .55fr;
+  gap:1rem;
+  margin-top:1.2rem;
+}
+.memory-network {
+  position:relative;
+  min-height:520px;
+  background:
+    linear-gradient(28deg,transparent 49%,rgba(210,161,66,.42) 50% 51%,transparent 52%),
+    linear-gradient(-22deg,transparent 49%,rgba(210,161,66,.3) 50% 51%,transparent 52%);
+}
+.memory-node {
+  position:absolute;
+  width:180px;
+  min-height:120px;
+  padding:.8rem;
+  transform:translate(-50%,-50%) rotate(var(--node-tilt,0deg));
+  background:var(--texture-paper-light) center/cover;
+  border:3px solid #5d4027;
+  box-shadow:5px 7px 0 rgba(0,0,0,.2);
+}
+.memory-node strong {
+  display:block;
+  color:var(--fern-shadow);
+  font-family:var(--font-display);
+  text-transform:uppercase;
+}
+.memory-node span {
+  display:block;
+  margin-top:.35rem;
+}
+.memory-node.locked {
+  opacity:.42;
+  filter:grayscale(.8);
+}
+.memory-node.center {
+  width:220px;
+  background:#dce7d7;
+  border-color:var(--old-pine);
+}
+.memory-legend {
+  padding:1rem;
+  background:var(--texture-paper-light) center/cover;
+  border:3px solid #5b3c24;
+}
+.culture-stage-card {
+  margin:.6rem 0 1.2rem;
+  padding:.8rem;
+  border-left:7px solid var(--old-pine);
+  background:rgba(233,210,161,.68);
+}
+.quiet-legends-book {
+  width:min(1240px,100%);
+  margin:1rem auto 0;
+  padding:1.2rem;
+}
+.quiet-legend-entry {
+  display:grid;
+  grid-template-columns:50px 1fr;
+  gap:.7rem;
+  margin:.65rem 0;
+  padding:.75rem;
+  background:var(--texture-paper-light) center/cover;
+  border-left:7px solid var(--lantern-gold);
+}
+.quiet-legend-entry .legend-icon {
+  width:46px;height:46px;
+  display:grid;place-items:center;
+  border-radius:50%;
+  background:var(--old-pine);
+  color:white;
+}
+.ending-physical-screen {
+  display:grid;
+  grid-template-columns:1.45fr .55fr;
+  gap:1rem;
+}
+.ending-book,
+.recognition-profile {
+  padding:2rem;
+  background:var(--texture-paper) center/cover;
+}
+.ending-image-wrap {
+  margin:1.2rem 0;
+  border:10px solid #d4b579;
+  box-shadow:var(--shadow-paper);
+}
+.ending-image-wrap img {
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  display:block;
+}
+.ending-text {
+  font-size:1.2rem;
+  line-height:1.6;
+}
+.ending-book blockquote {
+  margin:1rem 0;
+  padding:1rem;
+  border-left:8px solid var(--autumn-rust);
+  background:var(--texture-paper-light) center/cover;
+  font-style:italic;
+}
+.ending-artifacts {
+  display:flex;
+  gap:.65rem;
+  flex-wrap:wrap;
+  margin:1rem 0 1.4rem;
+}
+.ending-artifact {
+  width:58px;height:58px;
+  display:grid;place-items:center;
+  border:3px solid #65442a;
+  background:var(--texture-paper-light) center/cover;
+  font-size:1.6rem;
+}
+.recognition-profile h2 {
+  color:var(--fern-shadow);
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  font-size:2rem;
+}
+.profile-row {
+  padding:.7rem 0;
+  border-bottom:2px dashed rgba(86,58,34,.34);
+}
+.profile-row strong {
+  display:block;
+}
+@media(max-width:1050px) {
+  .forest-memory-layout,
+  .ending-physical-screen { grid-template-columns:1fr; }
+}
+@media(max-width:720px) {
+  .constellation-board,
+  .quiet-legends-book,
+  .ending-book,
+  .recognition-profile { padding:1rem; }
+  .memory-network { min-height:700px; }
+  .memory-node { width:145px; min-height:105px; font-size:.85rem; }
+  .ending-image-wrap img { height:280px; }
+}

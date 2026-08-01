@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-labelledby="title desc">
+<title id="title">Bigfoot Smallshoe footprint emblem</title>
+<desc id="desc">A weathered five-toed footprint used as the Bigfoot Smallshoe brand emblem.</desc>
+<g fill="#F2DFA8" stroke="#162C1D" stroke-width="10" stroke-linejoin="round">
+  <ellipse cx="118" cy="188" rx="60" ry="98" transform="rotate(-8 118 188)"/>
+  <ellipse cx="77" cy="63" rx="25" ry="34" transform="rotate(-24 77 63)"/>
+  <ellipse cx="111" cy="43" rx="24" ry="35" transform="rotate(-8 111 43)"/>
+  <ellipse cx="145" cy="47" rx="22" ry="33" transform="rotate(7 145 47)"/>
+  <ellipse cx="176" cy="65" rx="20" ry="29" transform="rotate(18 176 65)"/>
+  <ellipse cx="198" cy="92" rx="17" ry="24" transform="rotate(25 198 92)"/>
+</g>
+<path d="M88 142 C108 128, 138 127, 154 145 M82 180 C112 162, 144 166, 163 184 M90 220 C119 204, 146 209, 156 229"
+ fill="none" stroke="#162C1D" stroke-width="8" stroke-linecap="round" opacity=".35"/>
+</svg>

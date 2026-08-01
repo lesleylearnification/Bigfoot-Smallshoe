@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 520" role="img" aria-labelledby="title desc">
+<title id="title">Bigfoot Smallshoe title logo</title>
+<desc id="desc">A cream, forest-green, weathered expedition-style title lockup with a footprint emblem.</desc>
+<defs>
+  <filter id="rough">
+    <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="8" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.3" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</defs>
+<rect width="1500" height="520" rx="12" fill="none"/>
+<g transform="translate(75 88)">
+  <g transform="translate(0 0) scale(.78)">
+    <ellipse cx="115" cy="185" rx="57" ry="92" fill="#F2DFA8" stroke="#162C1D" stroke-width="12"/>
+    <ellipse cx="73" cy="61" rx="23" ry="32" fill="#F2DFA8" stroke="#162C1D" stroke-width="11"/>
+    <ellipse cx="107" cy="42" rx="22" ry="33" fill="#F2DFA8" stroke="#162C1D" stroke-width="11"/>
+    <ellipse cx="140" cy="47" rx="21" ry="31" fill="#F2DFA8" stroke="#162C1D" stroke-width="11"/>
+    <ellipse cx="171" cy="66" rx="19" ry="27" fill="#F2DFA8" stroke="#162C1D" stroke-width="11"/>
+    <ellipse cx="193" cy="91" rx="16" ry="23" fill="#F2DFA8" stroke="#162C1D" stroke-width="10"/>
+  </g>
+  <g filter="url(#rough)">
+    <text x="245" y="150"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="158" font-weight="900" letter-spacing="3"
+      fill="#F2DFA8" stroke="#162C1D" stroke-width="16" paint-order="stroke">
+      BIGFOOT
+    </text>
+    <text x="245" y="317"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-size="158" font-weight="900" letter-spacing="3"
+      fill="#F2DFA8" stroke="#162C1D" stroke-width="16" paint-order="stroke">
+      SMALLSHOE
+    </text>
+  </g>
+  <rect x="255" y="351" width="845" height="58" rx="3" fill="#294833"/>
+  <text x="285" y="390"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="31" font-weight="700" letter-spacing="8"
+    fill="#F8E9C8">
+    HELPING EVERYONE. SEEN BY NO ONE.
+  </text>
+</g>
+</svg>

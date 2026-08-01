@@ -1,0 +1,111 @@
+.build-banner {
+  width: min(1500px, 96vw);
+  margin: 0 auto;
+  padding: var(--space-4) 0;
+  color: var(--paper-light);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+.build-banner h1 {
+  margin: 0;
+  color: #efd98a;
+  text-transform: uppercase;
+  font-size: clamp(3rem, 7vw, 7rem);
+  line-height: .82;
+  text-shadow: 3px 3px 0 var(--forest-deep);
+}
+.tagline {
+  display: inline-block;
+  margin-top: .75rem;
+  background: var(--forest);
+  padding: .55rem .8rem;
+  font-weight: 700;
+}
+.build-status {
+  background: rgba(22, 45, 29, .88);
+  border: 2px solid rgba(239, 217, 138, .7);
+  padding: 1rem 1.25rem;
+  min-width: 190px;
+}
+.build-status span {
+  display: block;
+  margin-top: .35rem;
+}
+.app-stage {
+  width: min(1500px, 96vw);
+  min-height: 720px;
+  margin: 0 auto;
+}
+.foundation-screen {
+  min-height: 720px;
+  padding: clamp(2rem, 5vw, 5rem);
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: var(--space-5);
+  align-items: center;
+  background:
+    linear-gradient(rgba(20, 34, 24, .38), rgba(20, 34, 24, .64)),
+    url("../assets/illustrations/environments/cabin-backdrop.jpg") center/cover;
+  border: 9px solid #2a1a10;
+  box-shadow: var(--shadow-lg);
+}
+.foundation-copy {
+  background:
+    repeating-linear-gradient(0deg, rgba(79, 51, 24, .035) 0 1px, transparent 1px 5px),
+    var(--paper);
+  border: 3px solid #4d321d;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  box-shadow: var(--shadow-lg);
+  transform: rotate(-.5deg);
+}
+.foundation-copy h2 {
+  color: var(--forest-deep);
+  text-transform: uppercase;
+  font-family: var(--font-label);
+  font-size: clamp(2.2rem, 4.2vw, 4.8rem);
+  line-height: .95;
+}
+.foundation-copy p {
+  font-size: 1.12rem;
+  line-height: 1.55;
+}
+.architecture-map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+.architecture-map article {
+  min-height: 190px;
+  padding: var(--space-4);
+  background: rgba(247, 231, 196, .93);
+  border: 3px solid #4d321d;
+  box-shadow: 7px 9px 0 rgba(0, 0, 0, .26);
+  transform: rotate(var(--tilt, 0deg));
+}
+.architecture-map article:nth-child(1),
+.architecture-map article:nth-child(4) { --tilt: -1deg; }
+.architecture-map article:nth-child(2),
+.architecture-map article:nth-child(3) { --tilt: 1deg; }
+.architecture-map span {
+  font: 700 .8rem var(--font-label);
+  color: var(--rust);
+}
+.architecture-map h3 {
+  margin: .4rem 0;
+  color: var(--forest-deep);
+  font: 700 1.55rem var(--font-label);
+  text-transform: uppercase;
+}
+footer {
+  width: min(1500px, 96vw);
+  margin: 1rem auto;
+  padding: 1rem;
+  background: var(--paper);
+  border: 3px solid #55361d;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  line-height: 1.45;
+}

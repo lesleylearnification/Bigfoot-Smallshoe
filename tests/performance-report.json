@@ -1,0 +1,10 @@
+{
+  "images_processed": 28,
+  "jpeg_bytes_before": 4354680,
+  "jpeg_bytes_after": 3009605,
+  "jpeg_bytes_saved": 1345075,
+  "lazy_loading_added": true,
+  "async_image_decoding_added": true,
+  "external_runtime_dependencies": 0,
+  "build_target": "GitHub Pages static hosting"
+}

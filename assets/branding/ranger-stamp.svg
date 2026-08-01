@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 620" role="img" aria-label="Bigfoot Smallshoe ranger stamp">
+<circle cx="310" cy="310" r="275" fill="none" stroke="#974929" stroke-width="26"/>
+<circle cx="310" cy="310" r="220" fill="none" stroke="#974929" stroke-width="7" stroke-dasharray="12 10"/>
+<text x="310" y="110" text-anchor="middle" fill="#974929" font-family="Arial" font-size="42" font-weight="700" letter-spacing="5">BIGFOOT</text>
+<text x="310" y="555" text-anchor="middle" fill="#974929" font-family="Arial" font-size="42" font-weight="700" letter-spacing="5">SMALLSHOE</text>
+<g transform="translate(215 150) scale(.82)">
+  <ellipse cx="118" cy="188" rx="60" ry="98" fill="#974929"/>
+  <ellipse cx="77" cy="63" rx="25" ry="34" fill="#974929"/>
+  <ellipse cx="111" cy="43" rx="24" ry="35" fill="#974929"/>
+  <ellipse cx="145" cy="47" rx="22" ry="33" fill="#974929"/>
+  <ellipse cx="176" cy="65" rx="20" ry="29" fill="#974929"/>
+  <ellipse cx="198" cy="92" rx="17" ry="24" fill="#974929"/>
+</g>
+</svg>

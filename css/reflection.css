@@ -1,0 +1,278 @@
+
+.evening-screen {
+  background:
+    linear-gradient(rgba(16,25,20,.42),rgba(10,17,13,.62)),
+    url("../assets/illustrations/environments/cabin-room-build6.jpg") center/cover;
+}
+.reflection-book {
+  position:relative;
+  width:min(1280px,100%);
+  margin:auto;
+  padding:2.2rem 2.4rem 2.8rem;
+  background:
+    radial-gradient(circle at 88% 8%,rgba(220,156,69,.18),transparent 24%),
+    var(--texture-paper) center/cover;
+}
+.reflection-binding {
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:32px;
+  transform:translateX(-50%);
+  background:
+    radial-gradient(circle,#21160e 0 6px,transparent 7px) center 9px/28px 34px repeat-y,
+    linear-gradient(90deg,transparent 0 9px,rgba(68,45,25,.33) 10px 12px,transparent 13px);
+  pointer-events:none;
+}
+.reflection-intro {
+  max-width:860px;
+  margin:0 auto 1.5rem;
+  text-align:center;
+}
+.reflection-intro h1,
+.ranger-report h1 {
+  margin:.2rem 0 .6rem;
+  color:var(--fern-shadow);
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  font-size:clamp(2.5rem,5vw,5.4rem);
+  line-height:.9;
+}
+.round-memory {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:.65rem;
+  margin-top:1.4rem;
+}
+.round-memory-entry {
+  min-height:112px;
+  padding:.8rem;
+  background:var(--texture-paper-light) center/cover;
+  border-top:7px solid var(--old-pine);
+  box-shadow:3px 4px 0 rgba(0,0,0,.12);
+}
+.round-memory-entry strong {
+  display:block;
+  margin-bottom:.35rem;
+  color:var(--fern-shadow);
+  font-family:var(--font-display);
+  text-transform:uppercase;
+}
+.reflection-cards {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.2rem;
+}
+.reflection-card {
+  position:relative;
+  padding:1.25rem;
+  background:var(--texture-paper-light) center/cover;
+  border:3px solid #614128;
+  box-shadow:var(--shadow-paper);
+  transform:rotate(var(--reflection-tilt,0deg));
+}
+.reflection-card:last-child {
+  grid-column:1 / -1;
+  width:calc(50% - .6rem);
+  justify-self:center;
+}
+.reflection-card h2 {
+  margin:.25rem 0 .65rem;
+  color:var(--fern-shadow);
+  font-family:var(--font-display);
+  text-transform:uppercase;
+}
+.reflection-card blockquote {
+  margin:.7rem 0;
+  padding:.75rem 1rem;
+  border-left:7px solid var(--old-pine);
+  background:rgba(224,232,216,.78);
+  font-style:italic;
+  line-height:1.5;
+}
+.reflection-card .source-line {
+  font-size:.9rem;
+}
+.trail-compare {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.9rem;
+  margin-top:1rem;
+}
+.trail-box {
+  padding:.9rem;
+  border:2px solid #67462c;
+  background:rgba(248,233,200,.7);
+}
+.footprint-rating {
+  display:flex;
+  gap:.45rem;
+  flex-wrap:wrap;
+  margin-top:.65rem;
+}
+.footprint-button {
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:2px solid #67462c;
+  background:var(--texture-paper) center/cover;
+  font-size:1.35rem;
+}
+.footprint-button.selected {
+  color:white;
+  background:var(--old-pine);
+}
+.expert-summary {
+  margin-top:.8rem;
+  padding:.8rem;
+  border-left:7px solid var(--autumn-rust);
+  background:#e6dcc4;
+}
+.reflection-footer {
+  margin-top:1.5rem;
+  text-align:center;
+}
+.report-screen {
+  display:grid;
+  grid-template-columns:1.55fr .55fr;
+  gap:1rem;
+}
+.ranger-report {
+  position:relative;
+  padding:2rem 2.2rem 2.4rem 3.5rem;
+  background:
+    repeating-linear-gradient(to bottom,transparent 0 31px,rgba(94,70,44,.14) 32px 33px),
+    var(--texture-paper-light) center/cover;
+}
+.report-spiral {
+  position:absolute;
+  left:.7rem;
+  top:0;
+  bottom:0;
+  width:28px;
+  background:radial-gradient(circle,#21160e 0 6px,transparent 7px) center 10px/26px 34px repeat-y;
+}
+.report-header {
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:flex-start;
+  border-bottom:4px double #4b321e;
+  padding-bottom:1rem;
+}
+.report-header img {
+  width:145px;
+  transform:rotate(3deg);
+  opacity:.86;
+}
+.report-grid {
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:1.3rem;
+  margin-top:1.4rem;
+}
+.newspaper-clipping {
+  padding:1rem 1.1rem;
+  background:var(--texture-paper) center/cover;
+  border:3px solid #50361f;
+  box-shadow:var(--shadow-paper);
+  transform:rotate(-.4deg);
+}
+.newspaper-name {
+  margin-bottom:.7rem;
+  padding-bottom:.45rem;
+  border-bottom:4px double #3a281a;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+}
+.newspaper-clipping h2 {
+  margin:.2rem 0 .8rem;
+  font-family:var(--font-display);
+  text-transform:uppercase;
+  color:var(--fern-shadow);
+  font-size:clamp(2rem,4vw,4rem);
+  line-height:.92;
+}
+.newspaper-clipping p,
+.newspaper-clipping blockquote {
+  line-height:1.6;
+}
+.newspaper-clipping blockquote {
+  margin:1rem 0;
+  padding:.8rem 1rem;
+  border-left:7px solid var(--autumn-rust);
+  background:rgba(248,233,200,.68);
+}
+.forest-consequence {
+  padding:1rem;
+}
+.forest-consequence > p:not(.chapter-label) {
+  font-size:1.18rem;
+  line-height:1.55;
+}
+.outcome-breakdown {
+  display:grid;
+  gap:.65rem;
+  margin-top:1rem;
+}
+.outcome-row {
+  display:grid;
+  grid-template-columns:44px 1fr auto;
+  gap:.7rem;
+  align-items:center;
+  padding:.65rem;
+  background:rgba(233,210,161,.65);
+  border-left:6px solid var(--old-pine);
+}
+.outcome-row .icon {
+  width:40px;
+  height:40px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--map-paper-light);
+}
+.outcome-row strong {
+  display:block;
+}
+.outcome-row .result {
+  color:var(--old-pine);
+  font-weight:700;
+}
+.trail-marker-card {
+  align-self:start;
+  padding:1.25rem;
+  background:var(--texture-paper) center/cover;
+}
+.marker-option {
+  display:flex;
+  gap:.65rem;
+  margin:.65rem 0;
+  padding:.8rem;
+  background:var(--texture-paper-light) center/cover;
+  border:2px solid #65442a;
+}
+.marker-option input {
+  width:21px;
+  height:21px;
+  margin-top:.1rem;
+}
+@media(max-width:1100px) {
+  .round-memory { grid-template-columns:1fr 1fr; }
+  .reflection-cards { grid-template-columns:1fr; }
+  .reflection-card:last-child { grid-column:auto; width:auto; }
+  .report-screen { grid-template-columns:1fr; }
+}
+@media(max-width:720px) {
+  .reflection-book,
+  .ranger-report,
+  .trail-marker-card { padding:1rem; }
+  .reflection-binding,
+  .report-spiral { display:none; }
+  .round-memory,
+  .trail-compare,
+  .report-grid { grid-template-columns:1fr; }
+  .report-header { display:block; }
+  .report-header img { width:110px; margin-top:.7rem; }
+}

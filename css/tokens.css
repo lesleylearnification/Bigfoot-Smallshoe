@@ -1,0 +1,67 @@
+:root {
+  /* Brand colors */
+  --ink-black: #21160f;
+  --mushroom-ink: #514437;
+  --map-paper: #e9d2a1;
+  --map-paper-light: #f8e9c8;
+  --old-pine: #294833;
+  --fern-shadow: #162c1d;
+  --lantern-gold: #d4a348;
+  --autumn-rust: #974929;
+  --cabin-walnut: #4b2f1d;
+  --weathered-canvas: #c7a878;
+  --rain-moss: #627258;
+  --river-stone: #6e7772;
+  --faded-ranger-blue: #657b82;
+  --cabin-smoke: #272621;
+  --expedition-cream: #f2dfa8;
+
+  /* Semantic colors */
+  --text-primary: var(--ink-black);
+  --text-muted: var(--mushroom-ink);
+  --surface-paper: var(--map-paper);
+  --surface-paper-light: var(--map-paper-light);
+  --surface-dark: var(--cabin-walnut);
+  --surface-forest: var(--old-pine);
+  --accent-primary: var(--old-pine);
+  --accent-secondary: var(--autumn-rust);
+  --accent-warm: var(--lantern-gold);
+  --focus: #0b7ba7;
+
+  /* Typography */
+  --font-logo: Georgia, "Times New Roman", serif;
+  --font-display: "Arial Narrow", "Roboto Condensed", Arial, sans-serif;
+  --font-body: Georgia, "Times New Roman", serif;
+  --font-label: "Arial Narrow", Arial, sans-serif;
+  --font-hand: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+
+  /* Type scale */
+  --type-xs: .78rem;
+  --type-sm: .92rem;
+  --type-body: 1rem;
+  --type-lg: 1.18rem;
+  --type-xl: 1.5rem;
+  --type-2xl: clamp(2rem, 4vw, 4rem);
+  --type-logo: clamp(3.6rem, 8vw, 8.8rem);
+
+  /* Spacing */
+  --space-1: .5rem;
+  --space-2: .75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  /* Shadows */
+  --shadow-paper: 7px 9px 0 rgba(48, 29, 14, .24);
+  --shadow-object: 0 18px 34px rgba(0, 0, 0, .34);
+  --shadow-room: 0 28px 62px rgba(0, 0, 0, .5);
+
+  /* Materials */
+  --texture-paper: url("../assets/textures/paper-parchment.jpg");
+  --texture-paper-light: url("../assets/textures/paper-light.jpg");
+  --texture-wood: url("../assets/textures/wood-walnut.jpg");
+  --texture-canvas: url("../assets/textures/canvas-aged.jpg");
+  --texture-cork: url("../assets/textures/cork-board.jpg");
+  --texture-brass: url("../assets/textures/brass-aged.jpg");
+}
