@@ -1,0 +1,9 @@
+{
+  "name": "bigfoot-smallshoe-build-6",
+  "private": true,
+  "version": "6.9.0",
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "serve": "python -m http.server 8000"
+  }
+}

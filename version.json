@@ -1,0 +1,13 @@
+{
+  "title": "Bigfoot Smallshoe",
+  "version": "6.0.0",
+  "release_name": "Art Lock",
+  "release_date": "2026-08-01",
+  "platform": "Static HTML/CSS/JavaScript",
+  "hosting_target": "GitHub Pages",
+  "modules_completed": 10,
+  "scenario_count": 25,
+  "recognition_behaviors": 5,
+  "minimum_viewport_width": 320,
+  "external_runtime_dependencies": 0
+}

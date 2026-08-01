@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#182b1e">
+  <meta property="og:title" content="Bigfoot Smallshoe">
+  <meta property="og:description" content="Helping everyone. Seen by no one. A Learnify game about meaningful recognition.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/branding/logo-primary.png">
+  <link rel="icon" href="assets/branding/footprint-emblem.svg" type="image/svg+xml">
+  <meta name="description" content="Bigfoot Smallshoe: a handcrafted game about meaningful employee recognition.">
+  <title>Bigfoot Smallshoe · Build 6 Art Lock</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/brand.css">
+  <link rel="stylesheet" href="css/cabin.css">
+  <link rel="stylesheet" href="css/gameplay.css">
+  <link rel="stylesheet" href="css/reflection.css">
+  <link rel="stylesheet" href="css/cabinet.css">
+  <link rel="stylesheet" href="css/progression.css">
+  <link rel="stylesheet" href="css/experience.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <link rel="stylesheet" href="css/release.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to the game</a>
+
+  <header class="game-masthead">
+    <img class="masthead-logo" src="assets/branding/logo-primary.svg" alt="Bigfoot Smallshoe. Helping everyone. Seen by no one.">
+    <div class="masthead-tools">
+      <span class="module-chip">Build 6 · Module 4 of 10</span>
+      <button id="accessibilityToggle" class="field-button" type="button" aria-expanded="false">Accessibility</button>
+      <button id="soundToggle" class="field-button" type="button" aria-pressed="true">Sound: On</button>
+      <button id="motionToggle" class="field-button" type="button" aria-pressed="true">Motion: On</button>
+      <button id="returnCabinGlobal" class="field-button" type="button">Return to cabin</button>
+      <button id="resetGame" class="field-button" type="button">Reset expedition</button>
+    </div>
+  </header>
+
+  <main id="app" class="game-shell" aria-label="Bigfoot Smallshoe game">
+    <section id="cabinScreen" class="cabin-stage game-screen" aria-labelledby="cabin-title">
+      <h1 id="cabin-title" class="visually-hidden">Bigfoot Smallshoe’s cabin</h1>
+
+      <div class="window-panel" aria-hidden="true">
+        <img id="forestWindowImage" src="assets/illustrations/environments/forest-stage-0.jpg" alt="">
+        <span id="weatherNote" class="weather-note">Early Spring · light fog</span>
+      </div>
+      <div class="lantern" aria-hidden="true"><span class="lantern-top"></span><span class="lantern-glow"></span></div>
+
+      <button id="openJournal" class="cabin-object journal-hotspot hero-object" type="button" aria-describedby="journal-description">
+        <img src="assets/illustrations/ui/trail-journal.png" alt="" loading="lazy" decoding="async">
+        <span class="object-tag">Trail Journal</span>
+        <span id="journal-description" class="object-description">Begin today’s five-part recognition expedition.</span>
+      </button>
+
+      <button id="openMapCabin" class="cabin-object map-hotspot" type="button" aria-describedby="map-description">
+        <span class="map-paper">
+          <span class="map-river"></span><span class="map-path"></span>
+          <span class="map-pin pin-one"></span><span class="map-pin pin-two"></span>
+          <strong>Smallshoe Forest</strong>
+        </span>
+        <span class="object-tag">Forest Map</span>
+        <span id="map-description" class="object-description">Choose where today’s expedition begins.</span>
+      </button>
+
+      <button class="cabin-object satchel-hotspot" id="openSatchel" type="button">
+        <img src="assets/illustrations/ui/evidence-satchel.png" alt="" loading="lazy" decoding="async">
+        <span class="object-tag">Evidence Satchel</span>
+        <span class="object-description" id="satchelDescription">No evidence collected yet.</span>
+      </button>
+
+      <button class="cabin-object cabinet-hotspot" id="openCabinet" type="button" aria-describedby="cabinet-description">
+        <img src="assets/illustrations/ui/field-guide-cabinet.png" alt="" loading="lazy" decoding="async">
+        <span class="object-tag">Field Guide Cabinet</span>
+        <span id="cabinet-description" class="object-description">Open five drawers of research, field notes, and old wisdom.</span>
+      </button>
+
+      <button class="cabin-object wall-hotspot" id="openConstellation" type="button" aria-describedby="wall-description">
+        <img src="assets/illustrations/ui/constellation-wall.png" alt="" loading="lazy" decoding="async">
+        <span class="object-tag">Constellation Wall</span>
+        <span id="wall-description" class="object-description">See how recognition choices changed people, places, and the culture of the forest.</span>
+      </button>
+
+      <aside class="bigfoot-note">
+        <p class="chapter-label">Bigfoot’s Rule</p>
+        <p id="cabinRule">Quiet work still leaves tracks.</p>
+      </aside>
+
+      <aside class="quiet-legends">
+        <p class="chapter-label">Quiet Legends</p>
+        <p id="legendRank" class="legend-rank">Forest Intern</p>
+        <div id="cabinEvidenceShelf" class="legend-shelf"><span class="empty-shelf">Nothing collected yet.</span></div>
+      </aside>
+
+      <button id="quietDiscovery" class="quiet-discovery" type="button" aria-label="Inspect a small handwritten note">
+        <span class="discovery-paper">Must stop leaving footprints near Linda’s camera.</span>
+      </button>
+
+      <div class="ambient-raven" aria-hidden="true">🪶</div>
+      <div class="curtain-edge" aria-hidden="true"></div>
+
+      <img class="pov-silhouette" src="assets/illustrations/environments/bigfoot-pov-build6.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+    </section>
+
+    <section id="mapScreen" class="game-screen map-screen hidden" aria-labelledby="map-title">
+      <div class="physical-screen">
+        <button class="return-cabin field-button local-return" type="button">Return to cabin</button>
+        <article class="map-spread artifact">
+          <div class="map-introduction">
+            <p class="chapter-label">Morning ritual</p>
+            <h1 id="map-title">Choose today’s first trail.</h1>
+            <p>One scenario from each recognition behavior will appear during the expedition. The selected location sets the day’s opening scene.</p>
+            <div id="selectedLocationCard" class="selected-location">
+              <strong>Fern Creek Trail</strong>
+              <span>Selected starting point</span>
+            </div>
+            <button id="beginExpedition" class="primary-action" type="button">Open the Trail Journal</button>
+          </div>
+          <div class="map-image-wrap">
+            <img src="assets/illustrations/scenarios/smallshoe-forest-map.jpg" alt="Hand-drawn map of Smallshoe Forest with five named locations." loading="lazy" decoding="async">
+            <button class="map-location selected" style="left:20%;top:65%" data-location="Fern Creek Trail" type="button">Fern Creek</button>
+            <button class="map-location" style="left:51%;top:23%" data-location="Ranger Station Six" type="button">Station Six</button>
+            <button class="map-location" style="left:71%;top:40%" data-location="Owl Hollow" type="button">Owl Hollow</button>
+            <button class="map-location" style="left:39%;top:71%" data-location="Cedar Bridge" type="button">Cedar Bridge</button>
+            <button class="map-location" style="left:80%;top:78%" data-location="Lost Lake Campground" type="button">Lost Lake</button>
+          </div>
+        </article>
+        <img class="pov-silhouette" src="assets/illustrations/environments/bigfoot-pov-build6.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section id="gameplayScreen" class="game-screen gameplay-screen hidden" aria-labelledby="scenarioTitle">
+      <div class="physical-screen">
+        <button class="return-cabin field-button local-return" type="button">Save and return to cabin</button>
+
+        <article class="journal-spread artifact">
+          <div class="journal-binding" aria-hidden="true"></div>
+
+          <section class="journal-page scenario-page">
+            <header class="scenario-heading">
+              <div>
+                <p id="behaviorLabel" class="chapter-label"></p>
+                <h1 id="scenarioTitle"></h1>
+                <p id="scenarioLocation" class="scenario-location"></p>
+              </div>
+              <span id="roundStamp" class="round-stamp"></span>
+            </header>
+
+            <div id="behaviorRibbon" class="behavior-ribbon"></div>
+
+            <figure class="scenario-figure">
+              <img id="scenarioImage" src="" alt="" loading="lazy" decoding="async">
+              <figcaption id="scenarioObservation"></figcaption>
+            </figure>
+
+            <p id="scenarioSetup" class="scenario-setup"></p>
+
+            <fieldset id="choiceList" class="choice-list">
+              <legend>What evidence will you leave behind?</legend>
+            </fieldset>
+
+            <div id="sealedChoice" class="sealed-choice hidden" role="status">
+              <span class="wax-seal">B</span>
+              <div>
+                <strong>Choice sealed.</strong>
+                <p id="sealedChoiceText"></p>
+                <small>The forest will reveal the consequence after the fifth trail.</small>
+              </div>
+            </div>
+
+            <div class="journal-actions">
+              <button id="nextScenario" class="primary-action hidden" type="button">Follow the Next Trail</button>
+              <button id="returnMap" class="secondary-action" type="button">Review Forest Map</button>
+            </div>
+          </section>
+
+          <aside class="journal-page field-margin">
+            <section class="progress-section">
+              <p class="chapter-label">Today’s Trail</p>
+              <ol id="trailProgress" class="trail-progress"></ol>
+            </section>
+
+            <section class="motif-section">
+              <p class="chapter-label">Recognition Lens</p>
+              <div id="behaviorMotif" class="large-motif"></div>
+              <p id="behaviorPrompt"></p>
+            </section>
+
+            <section class="evidence-section">
+              <p class="chapter-label">Evidence Satchel</p>
+              <div id="liveEvidence" class="evidence-grid"></div>
+            </section>
+
+            <section class="signs-section">
+              <p class="chapter-label">Forest Signs</p>
+              <dl id="forestSigns"></dl>
+            </section>
+
+            <section class="ranger-margin">
+              <p class="chapter-label">Ranger Margin Note</p>
+              <p id="rangerObservation"></p>
+            </section>
+          </aside>
+        </article>
+
+        <img class="pov-silhouette" src="assets/illustrations/environments/bigfoot-pov-build6.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section id="roundCompleteScreen" class="game-screen hidden" aria-labelledby="roundCompleteTitle">
+      <div class="physical-screen">
+        <article class="round-complete artifact">
+          <p class="chapter-label">Expedition complete</p>
+          <h1 id="roundCompleteTitle">Five trails. Five choices. One very confused ranger station.</h1>
+          <p>Your choices are sealed inside the journal. The evening ritual now begins: review what happened, compare your judgment with expert guidance, and decide what trail you want to follow next.</p>
+          <div id="decisionSummary" class="decision-summary"></div>
+          <button id="beginReflection" class="primary-action" type="button">Brew Tea and Open the Campfire Journal</button>
+        </article>
+        <img class="pov-silhouette" src="assets/illustrations/environments/bigfoot-pov-build6.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section id="reflectionScreen" class="game-screen hidden" aria-labelledby="reflectionTitle">
+      <div class="physical-screen evening-screen">
+        <button class="return-cabin field-button local-return" type="button">Save and return to cabin</button>
+
+        <article class="reflection-book artifact">
+          <div class="reflection-binding" aria-hidden="true"></div>
+
+          <section class="reflection-intro">
+            <p id="reflectionMode" class="chapter-label">Bigfoot’s Tea Journal</p>
+            <h1 id="reflectionTitle">My Trail vs. the Expert Trail</h1>
+            <p id="reflectionIntro">Rate your judgment before the expert benchmark appears. Honest self-calibration is part of the practice.</p>
+            <div id="roundMemory" class="round-memory"></div>
+          </section>
+
+          <section id="reflectionCards" class="reflection-cards"></section>
+
+          <div class="reflection-footer">
+            <p id="reflectionProgress">Rate all five trails to continue.</p>
+            <button id="finishReflection" class="primary-action hidden" type="button">Open the Ranger Report</button>
+          </div>
+        </article>
+
+        <img class="pov-silhouette" src="assets/illustrations/environments/bigfoot-pov-build6.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section id="rangerReportScreen" class="game-screen hidden" aria-labelledby="reportTitle">
+      <div class="physical-screen report-screen">
+        <button class="return-cabin field-button local-return" type="button">Save and return to cabin</button>
+
+        <article class="ranger-report artifact">
+          <div class="report-spiral" aria-hidden="true"></div>
+          <header class="report-header">
+            <div>
+              <p class="chapter-label">Smallshoe National Forest</p>
+              <h1 id="reportTitle">Ranger Report</h1>
+              <p id="reportSubhead"></p>
+            </div>
+            <img src="assets/branding/ranger-stamp.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          </header>
+
+          <div class="report-grid">
+            <section class="newspaper-clipping">
+              <p class="newspaper-name">The Smallshoe Forest Chronicle</p>
+              <h2 id="headline"></h2>
+              <p id="reportStory"></p>
+              <blockquote id="lindaQuote"></blockquote>
+              <p id="garyQuote"></p>
+            </section>
+
+            <section class="forest-consequence">
+              <p class="chapter-label">What the forest noticed</p>
+              <p id="forestMoment"></p>
+              <div id="outcomeBreakdown" class="outcome-breakdown"></div>
+            </section>
+          </div>
+        </article>
+
+        <aside class="trail-marker-card artifact">
+          <p class="chapter-label">On My Next Expedition, I Will...</p>
+          <div id="markerOptions"></div>
+          <button id="finishRound" class="primary-action" type="button" disabled>Pin This Promise in the Cabin</button>
+        </aside>
+
+        <img class="pov-silhouette" src="assets/illustrations/environments/bigfoot-pov-build6.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section id="constellationScreen" class="game-screen hidden" aria-labelledby="constellationTitle">
+      <div class="physical-screen constellation-screen">
+        <button class="return-cabin field-button local-return" type="button">Return to cabin</button>
+
+        <article class="constellation-board artifact">
+          <header>
+            <p class="chapter-label">The Forest Remembers</p>
+            <h1 id="constellationTitle">Recognition leaves more than footprints.</h1>
+            <p id="constellationSummary">Complete expeditions to reveal the connections between recognition choices, people, and later behavior.</p>
+          </header>
+
+          <div class="forest-memory-layout">
+            <section id="memoryNetwork" class="memory-network"></section>
+            <aside class="memory-legend">
+              <p class="chapter-label">Culture shift</p>
+              <div id="cultureStage"></div>
+              <p class="chapter-label">Recurring Rangers</p>
+              <p id="lindaEvolution"></p>
+              <p id="garyEvolution"></p>
+            </aside>
+          </div>
+        </article>
+
+        <aside class="quiet-legends-book artifact">
+          <p class="chapter-label">Quiet Legends Collected</p>
+          <div id="quietLegendsList"></div>
+        </aside>
+
+        <img class="pov-silhouette" src="assets/illustrations/environments/bigfoot-pov-build6.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section id="endingScreen" class="game-screen hidden" aria-labelledby="endingTitle">
+      <div class="physical-screen ending-physical-screen">
+        <article class="ending-book artifact">
+          <p class="chapter-label">Final Legacy</p>
+          <h1 id="endingTitle"></h1>
+          <div class="ending-image-wrap">
+            <img id="endingImage" src="" alt="" loading="lazy" decoding="async">
+          </div>
+          <p id="endingText" class="ending-text"></p>
+          <blockquote id="endingQuote"></blockquote>
+          <div id="endingArtifacts" class="ending-artifacts"></div>
+          <button id="restartJourney" class="primary-action" type="button">Begin Another Season</button>
+        </article>
+
+        <aside class="recognition-profile artifact">
+          <p class="chapter-label">Recognition Profile</p>
+          <h2 id="profileTitle"></h2>
+          <p id="profileText"></p>
+          <div id="profileBreakdown"></div>
+        </aside>
+
+        <img class="pov-silhouette" src="assets/illustrations/environments/bigfoot-pov-build6.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section id="cabinetScreen" class="game-screen hidden" aria-labelledby="cabinetTitle">
+      <div class="physical-screen cabinet-physical-screen">
+        <button class="return-cabin field-button local-return" type="button">Return to cabin</button>
+
+        <article class="research-cabinet">
+          <header class="cabinet-header">
+            <div>
+              <p class="chapter-label">Bigfoot’s Field Guide Cabinet</p>
+              <h1 id="cabinetTitle">Research should feel like treasure.</h1>
+              <p>Open a drawer, inspect the collected journals, and follow any source trail that could improve your recognition practice.</p>
+            </div>
+            <img src="assets/branding/ranger-stamp.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+          </header>
+
+          <div class="cabinet-workspace">
+            <nav id="drawerTabs" class="cabinet-drawers" aria-label="Recognition behavior drawers"></nav>
+
+            <section class="cabinet-interior">
+              <div id="drawerIntro" class="drawer-intro"></div>
+              <div id="sourceShelf" class="source-artifact-grid"></div>
+
+              <article id="openSource" class="open-source-artifact hidden">
+                <button id="backToDrawer" class="secondary-action" type="button">Return to the drawer</button>
+                <div class="source-object-top">
+                  <span id="sourceArtifactType" class="artifact-type"></span>
+                  <span id="sourceFieldNumber" class="field-number"></span>
+                </div>
+                <p id="sourceMeta" class="chapter-label"></p>
+                <h2 id="sourceTitle"></h2>
+                <p id="sourceTakeaway" class="source-takeaway"></p>
+
+                <div class="source-note-grid">
+                  <section>
+                    <h3>Why Bigfoot saved it</h3>
+                    <p id="sourceBigfoot"></p>
+                  </section>
+                  <section>
+                    <h3>What you can improve</h3>
+                    <p id="sourceImprove"></p>
+                  </section>
+                </div>
+
+                <div class="source-actions">
+                  <button id="saveFieldNote" class="secondary-action" type="button">Save as a Field Note</button>
+                  <a id="sourceLink" class="primary-action" target="_blank" rel="noopener">Follow the Source Trail</a>
+                </div>
+              </article>
+            </section>
+          </div>
+        </article>
+
+        <aside class="field-note-pouch artifact">
+          <p class="chapter-label">Saved Field Notes</p>
+          <div id="savedFieldNotes"></div>
+        </aside>
+
+        <img class="pov-silhouette" src="assets/illustrations/environments/bigfoot-pov-build6.png" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <aside id="satchelPanel" class="object-panel" aria-hidden="true">
+      <button id="closeSatchel" class="panel-close" type="button" aria-label="Close evidence satchel">×</button>
+      <p class="chapter-label">Evidence Satchel</p>
+      <h2>Clues collected today</h2>
+      <div id="satchelContents" class="satchel-contents"></div>
+    </aside>
+  </main>
+
+  <aside id="accessibilityPanel" class="accessibility-panel hidden" role="dialog" aria-modal="false" aria-labelledby="accessibilityTitle">
+    <button id="closeAccessibility" class="accessibility-close" type="button" aria-label="Close accessibility options">×</button>
+    <p class="chapter-label">Ranger Radio Settings</p>
+    <h2 id="accessibilityTitle">Accessibility Options</h2>
+    <div class="accessibility-grid">
+      <label class="accessibility-option">
+        <input id="largeTextToggle" type="checkbox">
+        <span><strong>Larger text</strong><br>Increase reading size across the game.</span>
+      </label>
+      <label class="accessibility-option">
+        <input id="contrastToggle" type="checkbox">
+        <span><strong>Higher contrast</strong><br>Strengthen text and surface contrast.</span>
+      </label>
+      <label class="accessibility-option">
+        <input id="announceToggle" type="checkbox" checked>
+        <span><strong>Screen announcements</strong><br>Announce screen changes and important outcomes.</span>
+      </label>
+    </div>
+    <p class="accessibility-summary">Keyboard: use Tab to move, Enter or Space to activate, and Escape to close panels.</p>
+  </aside>
+
+  <div id="liveRegion" class="live-region" aria-live="polite" aria-atomic="true"></div>
+
+  <div id="transitionLayer" class="transition-layer" aria-hidden="true">
+    <div class="turning-page"></div>
+    <div id="transitionCaption" class="transition-caption"></div>
+  </div>
+
+  <div class="audio-assets" aria-hidden="true">
+    <audio id="audioCabin" src="assets/audio/cabin-ambience.wav" loop preload="auto"></audio>
+    <audio id="audioForest" src="assets/audio/forest-ambience.wav" loop preload="auto"></audio>
+    <audio id="audioPage" src="assets/audio/page-turn.wav" preload="auto"></audio>
+    <audio id="audioDrawer" src="assets/audio/drawer-slide.wav" preload="auto"></audio>
+    <audio id="audioStamp" src="assets/audio/footprint-stamp.wav" preload="auto"></audio>
+    <audio id="audioPin" src="assets/audio/pin-note.wav" preload="auto"></audio>
+    <audio id="audioKettle" src="assets/audio/kettle.wav" preload="auto"></audio>
+  </div>
+
+  <footer>
+    <p><strong>Learning objective:</strong> Managers practice recognizing contributions in specific, fair, earned, timely, and meaningful ways.</p>
+    <p>another Learnify game from Lesley S · teamlesleyscott@gmail.com<br><small>Build 6.0 · Art Lock release</small></p>
+  </footer>
+
+  <script src="js/data/game-data.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
